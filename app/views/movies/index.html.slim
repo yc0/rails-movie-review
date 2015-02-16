@@ -1,0 +1,13 @@
+- if !user_signed_in?
+  .jumbotron
+    h1 Your Favorite Movie Reviewed
+    p Gluten-free PBR&B post-ironic, paleo meggings hoodie small batch. Keytar cornhole ugh, dreamcatcher Vice drinking vinegar normcore food truck jean shorts umami retro. Retro vegan hashtag, scenester sriracha pug XOXO. Cardigan banh mi Austin freegan mumblecore selfies Etsy Kickstarter, Odd Future semiotics. Listicle brunch McSweeney's hashtag, American Apparel cardigan raw denim crucifix chillwave selvage selfies ethical Helvetica fanny pack lo-fi. Migas Portland raw denim, Echo Park hoodie shabby chic narwhal letterpress. Portland post-ironic chambray, semiotics pop-up beard Schlitz. 
+    p= link_to 'Sign up to write a review', new_user_registration_path, class: 'btn btn-primary btn-lg'
+.row
+  - @movies.each do |movie|
+    .col-sm-6.col-md-3
+      .thumbnail
+        = link_to (image_tag movie.image_url(:medium), class: 'image'), movie
+
+
+  
